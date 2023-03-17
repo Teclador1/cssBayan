@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    background-color: olive;
+    margin: 0 auto;
+    font-family: 'Inter', Arial, sans-serif;
+    max-width: 1920px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__title {
+    color: palegoldenrod;
+    font-size: 3.5vw;
+}
+
+.main-section {}
+
+.wrapper {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.bayan {}
+
+.bayan__box {
+    background-color: palegoldenrod;
+    color: black;
+    border: 4px groove black;
+    margin-bottom: 1%;
+    transition: all 0.3s ease;
+}
+
+.bayan__title {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 2vw;
+}
+
+.bayan__logo {
+    width: 10vw;
+    height: 10vw;
+    float: left;
+}
+
+.bayan__title::after {
+    content: "+";
+}
+
+.bayan__input,
+.bayan__text,
+.bayan__logo {
+    display: none;
+}
+
+.bayan__text {
+    padding: 10px 10px;
+    margin: 0;
+    font-size: 2vw;
+    text-align: justify;
+}
+
+.bayan__box :hover+.bayan__title,
+.bayan__box :checked+.bayan__title{
+    background-color: azure;
+}
+
+.bayan__box :hover+.bayan__title::after,
+.bayan__box :checked+.bayan__title::after {
+    content: "x";
+}
+
+.bayan__box :hover~.bayan__text,
+.bayan__box :checked~.bayan__text,
+.bayan__box :hover~.bayan__logo,
+.bayan__box :checked~.bayan__logo {
+    display: block;
+    background-color: azure;
+}
